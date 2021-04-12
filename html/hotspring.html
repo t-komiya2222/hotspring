@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>温泉利用データ</title>
+
+    <!-- 読み込み指定-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    
+    <!-- Javascriptファイルの指定 -->
+    <script src="../javascript/jmap.js"></script>
+    <script src="../javascript/hotspring.js"></script>
+
+    <!-- CSSファイルの指定 -->
+    <link href="../css/hotspring.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- コンテンツ読み込み -->
+    <div id="content">
+        <header id="content-header">
+            <h3>令和元年度温泉利用データ</h3>
+            <div id="menuwrapper">
+                <ul id="menu">
+                    <li><input type="button"  id = "usrbtn" value="利用者数" onclick="switching('usrbtn')"></li>
+                    <li><input type="button"  id = "htsprngbtn" value="源泉数" onclick="switching('htsprngbtn')"></li>
+                </ul>
+            </div>
+        </header>
+        <div id="subcontent">
+            <div id="side-wrapper">
+                <div id="canvaswrapper">
+                    <canvas id="hotspringriyoushachart" width="1000" height="1000">
+                    </canvas>
+                    <canvas id="hotspringgensenchart" width="1000" height="1000">
+                    </canvas>
+                </div>
+            </div>
+            
+            <div id="usersmap">
+            </div>
+            <div id="hotspringsmap">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
